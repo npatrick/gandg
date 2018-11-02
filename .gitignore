@@ -1,0 +1,18 @@
+# Dependency directories
+node_modules
+
+# Logs
+logs
+*.log
+tmp
+npm-debug.log*
+
+# Variables
+.env
+
+# User settings
+.vscode
+
+# Mac files
+.DS_Store
+
