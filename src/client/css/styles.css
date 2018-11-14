@@ -820,7 +820,11 @@ body {
   height: 60px;
 }
 #header.header-small #header-inner > .logo img {
-  max-height: 24px;
+  /* default: 24px; */
+  max-height: 35px;
+}
+#header.header-small #header-inner .main-menu > .menu-list .header-icon {
+  width: 12%;
 }
 #header a {
   -webkit-transition: color 0.3s ease;
@@ -846,6 +850,13 @@ body {
   height: 80px;
   margin-bottom: 50px;
 }
+.header-icon {
+  width: 15%;
+  -webkit-transition: width 0.3s ease;
+  -moz-transition: width 0.3s ease;
+  -ms-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+}
 .logo {
   position: absolute;
   left: 0;
@@ -860,7 +871,8 @@ body {
   -ms-transition: max-height 0.3s ease;
   -o-transition: max-height 0.3s ease;
   transition: max-height 0.3s ease;
-  max-height: 30px;
+  /* default: 30px; */
+  max-height: 50px;
 }
 .main-menu .logo {
   display: none;
@@ -1078,6 +1090,7 @@ body {
 /* ===========  5. Projects  =========== */
 .projects {
   margin: 100px -15px 100px;
+  background-color: #777676;
 }
 .projects .title {
   z-index: 1;
@@ -1091,10 +1104,11 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 40px;
-  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
+  background-color: #383838;
+
 }
 .projects .controls:after {
   content: '';
@@ -1105,6 +1119,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: -10px;
   display: inline-block;
 }
 .projects .controls ul:after {
@@ -1114,24 +1129,29 @@ body {
 }
 .projects .controls li {
   display: inline-block;
+  width: 140px;
   float: left;
   margin-left: 0;
   margin-right: 20px;
   position: relative;
-  padding: 5px 15px 3px;
-  background-color: #dddddd;
+  padding: 20px 30px;
+  background-color: transparent;
 }
 .projects .controls li:last-child {
   margin-right: 0;
 }
 .projects .controls li a {
   position: relative;
+  color: #ffffff;
 }
 .projects .controls .active {
-  background-color: #000000;
+  background-color: #777676;
+  transform: skew(-35deg);
 }
 .projects .controls .active a {
+  display: block;
   color: #ffffff;
+  transform: skew(35deg);
 }
 .projects .controls .active a:hover {
   color: #ffffff !important;
@@ -1140,7 +1160,7 @@ body {
   position: relative;
 }
 .projects .controls a:hover {
-  color: inherit !important;
+  color: #edb54f !important;
 }
 .projects .controls a:hover .tooltip-text {
   opacity: 1;
@@ -1319,11 +1339,11 @@ body {
 .projects .project-item-sizer {
   width: 50%;
 }
-.projects .grid-3-columns .project-item-sizer {
-  width: 33.333333%;
+.projects .grid-2-columns .project-item-sizer {
+  width: 25%;
 }
-.projects .grid-3-columns .project-item {
-  width: 33.333333%;
+.projects .grid-2-columns .project-item {
+  width: 25%;
   margin-bottom: 40px;
 }
 .projects .grid-3-columns .title {
@@ -1616,6 +1636,17 @@ body {
   line-height: 50px;
 }
 /* Services */
+.bar-service-name {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background-color: #ffe413;
+  bottom: 40px;
+}
+.bar-service-name h6 {
+  position: relative;
+  top: 8px;
+}
 .section-inner {
   margin-top: 80px;
   margin-bottom: 100px;
@@ -1762,7 +1793,7 @@ body {
   margin-right: auto;
 }
 .slider-one {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/slider/1.jpeg);
+  background-image: url(../images/tools-on-table.jpg);
   background-color: #eeeeee;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1784,7 +1815,8 @@ body {
 }
 .featured-slider-wrap .image {
   padding-bottom: 0;
-  height: calc(100vh - 80px);
+  /* default: calc(100vh - 80px); */
+  height: calc(100vh - 320px);
   position: relative;
   z-index: 1;
   -webkit-transition: opacity 0.3s ease;
@@ -1826,12 +1858,12 @@ body {
 .featured-slider-wrap .item-content {
   position: absolute;
   top: 51%;
-  left: 50%;
+  left: 30%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 33;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.59);
   padding: 50px 50px 45px;
   text-align: center;
   visibility: hidden;
