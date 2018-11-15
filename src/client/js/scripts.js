@@ -233,19 +233,19 @@
 		}
 		// ==== Projects filter nav, upon first load and clicks ==== //
 		// Remodelling ==> change this once we have Remodelling pics
-		$('#projects-list-filter div[data-filter="remodelling"]').hide();
+		$('#projects-list-filter div.remodelling').hide();
 		$('.projects .controls a[data-filter=".remodelling"]').on('click', function() {
-			$('#projects-list-filter div[data-filter="remodelling"]').show();
+			$('#projects-list-filter div.remodelling').show();
 		});
 		// Cabinets
-		$('#projects-list-filter div[data-filter="cabinets"]').hide();
+		$('#projects-list-filter div.cabinets').hide();
 		$('.projects .controls a[data-filter=".cabinets"]').on('click', function() {
-			$('#projects-list-filter div[data-filter="cabinets"]').show();
+			$('#projects-list-filter div.cabinets').show();
 		});
 		// Fencing
-		$('#projects-list-filter div[data-filter="fencing"]').hide();
+		$('#projects-list-filter div.fencing').hide();
 		$('.projects .controls a[data-filter=".fencing"]').on('click', function() {
-			$('#projects-list-filter div[data-filter="fencing"]').show();
+			$('#projects-list-filter div.fencing').show();
 		});
 		/*  Project Pics  */
 		// Image Async Load
