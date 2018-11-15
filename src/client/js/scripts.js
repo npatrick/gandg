@@ -317,6 +317,12 @@
 			$projectInner.scrollToFixed(options);
 		}
 
+		// Contact Form
+		// Add structure to phone number like parentheses & hypen
+		if ($('.form-phone > input').length) {
+			$('.form-phone > input').mask('(000) 000-0000');
+		}
+
 
 		$(window).on('load', function () {
 			$('.preloader').addClass('deactivate');

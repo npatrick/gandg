@@ -379,6 +379,7 @@ input[type="search"],
 input[type="text"],
 input[type="url"],
 input[type="number"],
+input[type="tel"],
 input[type="password"],
 input[type="email"],
 input[type="file"],
@@ -401,6 +402,7 @@ input[type="search"]::-webkit-input-placeholder,
 input[type="text"]::-webkit-input-placeholder,
 input[type="url"]::-webkit-input-placeholder,
 input[type="number"]::-webkit-input-placeholder,
+input[type=tel]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder,
 input[type="email"]::-webkit-input-placeholder,
 input[type="file"]::-webkit-input-placeholder,
@@ -411,6 +413,7 @@ input[type="search"]::-moz-placeholder,
 input[type="text"]::-moz-placeholder,
 input[type="url"]::-moz-placeholder,
 input[type="number"]::-moz-placeholder,
+input[type=tel]::-moz-placeholder,
 input[type="password"]::-moz-placeholder,
 input[type="email"]::-moz-placeholder,
 input[type="file"]::-moz-placeholder,
@@ -421,6 +424,7 @@ input[type="search"]:-ms-input-placeholder,
 input[type="text"]:-ms-input-placeholder,
 input[type="url"]:-ms-input-placeholder,
 input[type="number"]:-ms-input-placeholder,
+input[type=tel]:-ms-input-placeholder,
 input[type="password"]:-ms-input-placeholder,
 input[type="email"]:-ms-input-placeholder,
 input[type="file"]:-ms-input-placeholder,
@@ -431,6 +435,7 @@ input[type="search"]:-moz-placeholder,
 input[type="text"]:-moz-placeholder,
 input[type="url"]:-moz-placeholder,
 input[type="number"]:-moz-placeholder,
+input[type=tel]:-moz-placeholder,
 input[type="password"]:-moz-placeholder,
 input[type="email"]:-moz-placeholder,
 input[type="file"]:-moz-placeholder,
@@ -1881,6 +1886,16 @@ Quick Override solution below:
 .featured-slider-wrap .item {
   position: relative;
 }
+.call-to-action {
+  padding: 12px 20px;
+  background-color: #fa7f00;
+  color: #ffffff;
+  border-radius: 3px;
+}
+.call-to-action:hover {
+  background-color: #e48522;
+  color: #ffffff !important;
+}
 .featured-slider-wrap .item-content {
   position: absolute;
   top: 51%;
@@ -1971,6 +1986,11 @@ Quick Override solution below:
   right: 20px;
   position: absolute;
 }
+/* ============== Why Us ============== */
+.why-us {
+  margin-bottom: 200px;
+}
+
 /* ===========  6. Posts  =========== */
 .col-sm-8 .kd-banner,
 .col-sm-12 .kd-banner {
@@ -2404,6 +2424,19 @@ article .post-media {
 #comments .reply span:last-child {
   margin-right: 0;
 }
+.skew {
+  content: "";
+    position: absolute;
+    margin: 0;
+    top: 120px;
+    bottom: 0;
+    left: -18%;
+    width: calc(100vh * 3);
+    height: calc(100vh);
+    background-color: rgba(223, 230, 243, 0.43);
+    transform: skewY(10deg);
+    z-index: -1;
+}
 .contact {
   font-size: 14px;
 }
@@ -2436,7 +2469,7 @@ article .post-media {
   display: block;
   font-weight: 700;
   width: 100%;
-  background-color: #242424;
+  background-color: #fa7f00;
   border: none;
   color: #ffffff;
   text-transform: uppercase;
@@ -2494,6 +2527,7 @@ article .post-media {
   padding-bottom: 100%;
 }
 #footer {
+  height: 415px;
   padding: 30px 0;
   background-color: #000000;
   text-align: center;
@@ -2544,7 +2578,7 @@ article .post-media {
   visibility: hidden;
   opacity: 0;
   z-index: 9;
-  background-color: #000000;
+  background-color: #fa7f00;
   color: #ffffff;
   -webkit-transition: visibility 0.3s ease, opacity 0.3s ease;
   -moz-transition: visibility 0.3s ease, opacity 0.3s ease;
