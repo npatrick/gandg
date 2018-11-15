@@ -1019,7 +1019,7 @@ a.anchor {
   padding-top: 5px;
   padding-left: 40px;
   list-style: none;
-  border-right: 1px solid grey
+  border-right: 1px solid #505050;
 }
 #parent-ul .list-three {
   background: url("../images/icons/phone-call.png") no-repeat;
