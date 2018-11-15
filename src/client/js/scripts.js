@@ -9,7 +9,7 @@
  */
 
 (function ($) {
-
+	// filtering & sorting transitions
 	$.fn.hukaIsotope = function (opts) {
 		var $self = $(this),
 			defaults = {
@@ -22,10 +22,21 @@
 			},
 			options = $.extend(defaults, $self.data(), opts),
 			$images = $('img', $self),
+			$smallImages = $('.image', $self),
 			count = 0,
-			total = $images.length;
+			total = $images.length,
+			smallTotal = $smallImages.length;
 
-		if (total) {
+		if (smallTotal) {
+			$.each($smallImages, function () {
+				count++;
+
+				if (count === smallTotal) {
+					$self.isotope(options);
+					$self.data('isIsotope', true);
+				}
+			});
+		} else if (total) {
 			$.each($images, function () {
 				var image = new Image();
 
@@ -41,8 +52,7 @@
 					}
 				}
 			});
-		}
-		else {
+		} else {
 			$self.isotope(options);
 			$self.data('isIsotope', true);
 		}
@@ -203,6 +213,7 @@
 			}
 		});
 
+
 		/* 5. Portfolio */
 		var $portfolio = $('.grids-layout');
 
@@ -220,6 +231,41 @@
 				delegate: 'a'
 			});
 		}
+		// ==== Projects filter nav, upon first load and clicks ==== //
+		// Remodelling ==> change this once we have Remodelling pics
+		$('#projects-list-filter div[data-filter="remodelling"]').hide();
+		$('.projects .controls a[data-filter=".remodelling"]').on('click', function() {
+			$('#projects-list-filter div[data-filter="remodelling"]').show();
+		});
+		// Cabinets
+		$('#projects-list-filter div[data-filter="cabinets"]').hide();
+		$('.projects .controls a[data-filter=".cabinets"]').on('click', function() {
+			$('#projects-list-filter div[data-filter="cabinets"]').show();
+		});
+		// Fencing
+		$('#projects-list-filter div[data-filter="fencing"]').hide();
+		$('.projects .controls a[data-filter=".fencing"]').on('click', function() {
+			$('#projects-list-filter div[data-filter="fencing"]').show();
+		});
+		/*  Project Pics  */
+		// Image Async Load
+		$('.lazyLoad').each(function () {
+		var $currentImage = $(this);
+			$(this).attr('src', $currentImage.attr('data-src'));
+		});
+		$portfolio.each(function () {
+			$(this).hukaIsotope();
+		});
+
+		//////// Remove preloader after we assign img src ///////
+		if ($('#projects-list-filter').length !== 0) {
+			$('.preloader').addClass('deactivate');
+		}
+		// and Carousel
+		if ($('.carousel').length) {
+			$('.carousel').carousel({interval: false});
+		}
+		////////////////////////////////////////////////////////
 
 		var $backToTop = $('.back-to-top');
 

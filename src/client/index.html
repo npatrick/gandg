@@ -9,6 +9,8 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Fjalla+One%3A400%2C700%7CRoboto+Condensed%3A400%2C400i%2C700%2C700i&subset=latin,latin-ext' type='text/css' media='all' />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous" />
 
 	<link rel="stylesheet" type="text/css" href="css/libs/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/libs/bootstrap.min.css">
@@ -181,233 +183,285 @@
 			<div class="projects">
 				<div class="controls">
 					<ul>
-						<li class="active">
+						<!-- <li class="active">
 							<a href="#" data-filter="*" data-tooltip="12">All</a>
+						</li> -->
+						<li>
+							<a href="#" data-filter=".remodelling" data-tooltip="0">Remodelling</a>
+						</li>
+						<li class="active">
+							<a href="#" data-filter=".garage" data-tooltip="6">Garage</a>
 						</li>
 						<li>
-							<a href="#" data-filter=".remodelling" data-tooltip="9">Remodelling</a>
+							<a href="#" data-filter=".cabinets" data-tooltip="14">Cabinets</a>
 						</li>
 						<li>
-							<a href="#" data-filter=".garage" data-tooltip="6">Garage Remodeling</a>
-						</li>
-						<li>
-							<a href="#" data-filter=".cabinets" data-tooltip="8">Cabinets</a>
-						</li>
-						<li>
-							<a href="#" data-filter=".fencing" data-tooltip="7">Fencing</a>
+							<a href="#" data-filter=".fencing" data-tooltip="0">Fencing</a>
 						</li>
 					</ul>
 				</div>
-				<div class="grids-layout cover grid-4-columns">
+				<div id="projects-list-filter" class="grids-layout cover grid-4-columns">
 					<div class="project-item-sizer"></div>
-					<div class="project-item design travel">
-						<div class="project-item-inner image" style="background-image: url(images/projects/1.jpg)">
-							<div class="project-item-content">
-								<h2 class="title">
-									<a href="#">Chair</a>
-								</h2>
-								<ul class="project-cat">
-									<li>
-										<a href="#">Branding</a>
-									</li>
-									<li>
-										<a href="#">Design</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
 
-					<div class="project-item design identity">
-						<div class="project-item-inner image" style="background-image: url(images/projects/2.jpg)">
-							<div class="project-item-content">
-								<h2 class="title">
-									<a href="#">Watch</a>
-								</h2>
-								<ul class="project-cat">
-									<li>
-										<a href="#">Branding</a>
-									</li>
-									<li>
-										<a href="#">Design</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+					<div class="project-item garage">
+            <div class="project-item-inner image" style="background-image: url(images/project/garage/1-small.jpg)" data-toggle="modal" data-target="#carousel-box" data-slide-to="0">
+              <div class="project-item-content">
+                <h2 class="title">Click Me!</h2>
+              </div>
+            </div>
+            
+          </div>
 
-					<div class="project-item branding travel">
-						<div class="project-item-inner image" style="background-image: url(images/projects/3.jpg)">
-							<div class="project-item-content">
-								<h2 class="title">
-									<a href="#">Glass</a>
-								</h2>
-								<ul class="project-cat">
-									<li>
-										<a href="#">Branding</a>
-									</li>
-									<li>
-										<a href="#">Design</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+          <div class="project-item garage">
+            <div class="project-item-inner image" style="background-image: url(images/project/garage/2-small.jpg)" data-toggle="modal" data-target="#carousel-box"
+              data-slide-to="1"></div>
+            
+          </div>
+    
+          <div class="project-item garage">
+            <div class="project-item-inner image" style="background-image: url(images/project/garage/3-small.jpg)" data-toggle="modal" data-target="#carousel-box"
+              data-slide-to="2"></div>
+            
+          </div>
+    
+          <div class="project-item garage">
+            <div class="project-item-inner image" style="background-image: url(images/project/garage/4-small.jpg)" data-toggle="modal" data-target="#carousel-box"
+              data-slide-to="3"></div>
+            
+          </div>
+    
+          <div class="project-item garage">
+            <div class="project-item-inner image" style="background-image: url(images/project/garage/5-small.jpg)" data-toggle="modal" data-target="#carousel-box"
+              data-slide-to="4"></div>
+            
+          </div>
+    
+          <div class="project-item garage">
+            <div class="project-item-inner image" style="background-image: url(images/project/garage/6-small.jpg)" data-toggle="modal" data-target="#carousel-box"
+              data-slide-to="5"></div>
+            
+          </div>
+          <!-- Carousel -->
+          <div id="carousel-box" class="modal fade carousel slide" data-ride="carousel" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-box" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-box" data-slide-to="1"></li>
+                  <li data-target="#carousel-box" data-slide-to="2"></li>
+                  <li data-target="#carousel-box" data-slide-to="3"></li>
+                  <li data-target="#carousel-box" data-slide-to="4"></li>
+                  <li data-target="#carousel-box" data-slide-to="5"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="" class="lazyLoad" data-src="images/projects/garage/1.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/garage/2.jpg" style="width: 100%; height: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/garage/3.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/garage/4.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/garage/5.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/garage/6.jpg" style="width: 100%;" />
+                  </div>
+                </div>
+                <!-- end of carousel inner -->
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-box" role="button" data-slide="prev">
+                  <i class="fas fa-angle-left" aria-hidden="true"></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-box" role="button" data-slide="next">
+                  <i class="fas fa-angle-right" aria-hidden="true"></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <!-- End of Modal Content -->
+            </div>
+            <!-- End of Modal-Dialog -->
+          </div>
+          <!-- End of Carousel-Box Garages Section-->
+					
+					<!-- Cabinets Section -->
+					<div class="project-item cabinets">
+            <div class="project-item-inner image" style="background-image: url(images/project/cabinets/1-small.jpg)" data-toggle="modal" data-target="#carousel-box-2" data-slide-to="0">
+              <div class="project-item-content">
+                <h2 class="title">Click Me!</h2>
+              </div>
+            </div>
+            
+          </div>
 
-					<div class="project-item branding design">
-						<div class="project-item-inner image" style="background-image: url(images/projects/4.jpg)">
-							<div class="project-item-content">
-								<h2 class="title">
-									<a href="#">Perfume</a>
-								</h2>
-								<ul class="project-cat">
-									<li>
-										<a href="#">Branding</a>
-									</li>
-									<li>
-										<a href="#">Design</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+          <div class="project-item cabinets">
+            <div class="project-item-inner image" style="background-image: url(images/project/cabinets/2-small.jpg)" data-toggle="modal" data-target="#carousel-box-2"
+              data-slide-to="1"></div>
+            
+          </div>
+    
+          <div class="project-item cabinets">
+            <div class="project-item-inner image" style="background-image: url(images/project/cabinets/3-small.jpg)" data-toggle="modal" data-target="#carousel-box-2"
+              data-slide-to="2"></div>
+            
+          </div>
+    
+          <div class="project-item cabinets">
+            <div class="project-item-inner image" style="background-image: url(images/project/cabinets/4-small.jpg)" data-toggle="modal" data-target="#carousel-box-2"
+              data-slide-to="3"></div>
+            
+          </div>
+    
+          <div class="project-item cabinets">
+            <div class="project-item-inner image" style="background-image: url(images/project/cabinets/5-small.jpg)" data-toggle="modal" data-target="#carousel-box-2"
+              data-slide-to="4"></div>
+            
+          </div>
+    
+          <div class="project-item cabinets">
+            <div class="project-item-inner image" style="background-image: url(images/project/cabinets/6-small.jpg)" data-toggle="modal" data-target="#carousel-box-2"
+              data-slide-to="5"></div>
+            
+          </div>
+          <div class="project-item cabinets">
+            <div class="project-item-inner image" style="background-image: url(images/project/cabinets/7-small.jpg)" data-toggle="modal" data-target="#carousel-box-2" data-slide-to="6">
+              <div class="project-item-content">
+                <h2 class="title">Click Me!</h2>
+              </div>
+            </div>
+            
+          </div>
 
-					<div class="project-item identity travel">
-						<div class="project-item-inner image" style="background-image: url(images/projects/5.jpg)">
-							<div class="project-item-content">
-								<h2 class="title">
-									<a href="#">Book</a>
-								</h2>
-								<ul class="project-cat">
-									<li>
-										<a href="#">Branding</a>
-									</li>
-									<li>
-										<a href="#">Design</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+          <div class="project-item cabinets">
+            <div class="project-item-inner image" style="background-image: url(images/project/cabinets/8-small.jpg)" data-toggle="modal" data-target="#carousel-box-2"
+              data-slide-to="7"></div>
+            
+          </div>
+    
+          <div class="project-item cabinets">
+            <div class="project-item-inner image" style="background-image: url(images/project/cabinets/9-small.jpg)" data-toggle="modal" data-target="#carousel-box-2"
+              data-slide-to="8"></div>
+            
+          </div>
+    
+          <div class="project-item cabinets">
+            <div class="project-item-inner image" style="background-image: url(images/project/cabinets/10-small.jpg)" data-toggle="modal" data-target="#carousel-box-2"
+              data-slide-to="9"></div>
+            
+          </div>
+    
+          <div class="project-item cabinets">
+            <div class="project-item-inner image" style="background-image: url(images/project/cabinets/11-small.png)" data-toggle="modal" data-target="#carousel-box-2"
+              data-slide-to="10"></div>
+            
+          </div>
+    
+          <div class="project-item cabinets">
+            <div class="project-item-inner image" style="background-image: url(images/project/cabinets/12-small.jpg)" data-toggle="modal" data-target="#carousel-box-2"
+              data-slide-to="11"></div>
+            
+          </div>
+          <div class="project-item cabinets">
+            <div class="project-item-inner image" style="background-image: url(images/project/cabinets/13-small.jpg)" data-toggle="modal" data-target="#carousel-box-2"
+              data-slide-to="12"></div>
+            
+          </div>
+    
+          <div class="project-item cabinets">
+            <div class="project-item-inner image" style="background-image: url(images/project/cabinets/14-small.jpg)" data-toggle="modal" data-target="#carousel-box-2"
+              data-slide-to="13"></div>
+            
+          </div>
+          <!-- Carousel 2 -->
+          <div id="carousel-box-2" class="modal fade carousel slide" data-ride="carousel" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-box-2" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-box-2" data-slide-to="1"></li>
+                  <li data-target="#carousel-box-2" data-slide-to="2"></li>
+                  <li data-target="#carousel-box-2" data-slide-to="3"></li>
+                  <li data-target="#carousel-box-2" data-slide-to="4"></li>
+                  <li data-target="#carousel-box-2" data-slide-to="5"></li>
+                  <li data-target="#carousel-box-2" data-slide-to="6"></li>
+                  <li data-target="#carousel-box-2" data-slide-to="7"></li>
+                  <li data-target="#carousel-box-2" data-slide-to="8"></li>
+                  <li data-target="#carousel-box-2" data-slide-to="9"></li>
+                  <li data-target="#carousel-box-2" data-slide-to="10"></li>
+                  <li data-target="#carousel-box-2" data-slide-to="11"></li>
+                  <li data-target="#carousel-box-2" data-slide-to="12"></li>
+                  <li data-target="#carousel-box-2" data-slide-to="13"></li>
+                </ol>
+                <div class="carousel-inner">
 
-					<div class="project-item branding identity">
-						<div class="project-item-inner image" style="background-image: url(images/projects/6.jpg)">
-							<div class="project-item-content">
-								<h2 class="title">
-									<a href="#">Clock</a>
-								</h2>
-								<ul class="project-cat">
-									<li>
-										<a href="#">Branding</a>
-									</li>
-									<li>
-										<a href="#">Design</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+                  <div class="item active">
+                    <img src="" class="lazyLoad" data-src="images/projects/cabinets/1.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/cabinets/2.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/cabinets/3.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/cabinets/4.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/cabinets/5.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/cabinets/6.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/cabinets/7.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/cabinets/9.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/cabinets/10.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/cabinets/11.png" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/cabinets/12.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/cabinets/13.jpg" style="width: 100%;" />
+                  </div>
+                  <div class="item">
+                    <img src="" class="lazyLoad" data-src="images/projects/cabinets/14.jpg" style="width: 100%;" />
+                  </div>
 
-					<div class="project-item identity travel">
-						<div class="project-item-inner image" style="background-image: url(images/projects/7.jpg)">
-							<div class="project-item-content">
-								<h2 class="title">
-									<a href="#">Picture</a>
-								</h2>
-								<ul class="project-cat">
-									<li>
-										<a href="#">Branding</a>
-									</li>
-									<li>
-										<a href="#">Design</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="project-item branding design">
-						<div class="project-item-inner image" style="background-image: url(images/projects/8.jpg)">
-							<div class="project-item-content">
-								<h2 class="title">
-									<a href="#">Mountain</a>
-								</h2>
-								<ul class="project-cat">
-									<li>
-										<a href="#">Branding</a>
-									</li>
-									<li>
-										<a href="#">Design</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="project-item branding travel">
-						<div class="project-item-inner image" style="background-image: url(images/projects/9.jpg)">
-							<div class="project-item-content">
-								<h2 class="title">
-									<a href="#">Mountain</a>
-								</h2>
-								<ul class="project-cat">
-									<li>
-										<a href="#">Branding</a>
-									</li>
-									<li>
-										<a href="#">Design</a>
-									</li>
-								</ul>
-							</div>
-
-						</div>
-					</div>
-					<div class="project-item branding travel">
-						<div class="project-item-inner image" style="background-image: url(images/projects/10.jpg)">
-							<div class="project-item-content">
-								<h2 class="title">
-									<a href="#">Mountain</a>
-								</h2>
-								<ul class="project-cat">
-									<li>
-										<a href="#">Branding</a>
-									</li>
-									<li>
-										<a href="#">Design</a>
-									</li>
-								</ul>
-							</div>
-
-						</div>
-					</div>
+                </div>
+                <!-- end of carousel inner -->
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-box-2" role="button" data-slide="prev">
+                  <i class="fas fa-angle-left" aria-hidden="true"></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-box-2" role="button" data-slide="next">
+                  <i class="fas fa-angle-right" aria-hidden="true"></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <!-- End of Modal Content -->
+            </div>
+            <!-- End of Modal-Dialog -->
+          </div>
+          <!-- End of Carousel-Box Fidler Section-->
+					<!-- End of Cabinets Section -->
 				</div>
-
-				<!-- Pagination -->
-				<div class="pagination-wrap">
-					<ul>
-						<li>
-							<a class="prev page-numbers" href="#">
-								<i class="fa fa-arrow-left"></i>
-							</a>
-						</li>
-						<li>
-							<a class="page-numbers" href="#">1</a>
-						</li>
-						<li>
-							<span class="page-numbers current">2</span>
-						</li>
-						<li>
-							<a class="page-numbers" href="#">3</a>
-						</li>
-						<li>
-							<a class="next page-numbers" href="#">
-								<i class="fa fa-arrow-right"></i>
-							</a>
-						</li>
-					</ul>
-
-				</div>
-				<!-- End Pagination -->
+				<!-- End of grids-layout -->
 			</div>
 
 		</div>
@@ -521,8 +575,9 @@
 
 <!-- Scripts -->
 <script src="js/libs/jquery-1.12.4.min.js"></script>
-<script src="js/libs/jquery.justifiedGallery.min.js"></script>
+<!-- <script src="js/libs/jquery.justifiedGallery.min.js"></script> -->
 <script src="js/libs/jquery.magnific-popup.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
 <script src="js/libs/isotope.pkgd.min.js"></script>
 <script src="js/libs/owl.carousel.js"></script>
 <script src="js/scripts.js"></script>

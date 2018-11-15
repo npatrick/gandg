@@ -1088,6 +1088,25 @@ body {
   color: #444444;
 }
 /* ===========  5. Projects  =========== */
+/* 
+Bootstrap adds this class to the body element 
+when modal is open, and inserts => padding-right 17px; 
+this moves all the body elements to shift
+Quick Override solution below:
+*/
+.modal-open {
+  overflow: inherit;
+  overflow-y: hidden;
+  padding-right: 0px !important;
+}
+.modal, .carousel {
+  position: fixed;
+}
+.carousel-control > i {
+  position: absolute;
+  top: 48%;
+  font-size: 40px;
+}
 .projects {
   margin: 100px -15px 100px;
   background-color: #4c4c4c;
@@ -1128,7 +1147,7 @@ body {
 }
 .projects .controls li {
   display: inline-block;
-  width: 140px;
+  width: 165px;
   margin-left: 0;
   margin-right: 20px;
   position: relative;
