@@ -233,9 +233,14 @@
 		}
 		// ==== Projects filter nav, upon first load and clicks ==== //
 		// Remodelling ==> change this once we have Remodelling pics
-		$('#projects-list-filter div.remodelling').hide();
-		$('.projects .controls a[data-filter=".remodelling"]').on('click', function() {
-			$('#projects-list-filter div.remodelling').show();
+		// $('#projects-list-filter div.remodelling').hide();
+		// $('.projects .controls a[data-filter=".remodelling"]').on('click', function() {
+		// 	$('#projects-list-filter div.remodelling').show();
+		// });
+		// Garage
+		$('#projects-list-filter div.garage').hide();
+		$('.projects .controls a[data-filter=".garage"]').on('click', function() {
+			$('#projects-list-filter div.garage').show();
 		});
 		// Cabinets
 		$('#projects-list-filter div.cabinets').hide();

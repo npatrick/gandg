@@ -809,6 +809,9 @@ a.anchor {
   visibility: hidden;
 }
 /* ===========  4. Header  =========== */
+.whiteFont {
+  color: #ffffff;
+}
 #header {
   background-color: #000000;
   height: 100px;
