@@ -1965,7 +1965,8 @@ Quick Override solution below:
   transform: translate(-50%, -50%);
   z-index: 33;
   background-color: rgba(0, 0, 0, 0.59);
-  padding: 50px 50px 45px;
+  /* padding: 50px 50px 45px; */
+  padding: 3% 2% 5% 2%;
   text-align: center;
   visibility: hidden;
   opacity: 0;
@@ -3380,6 +3381,9 @@ article .post-media {
   .list-three a span {
     font-size: 18px;
   }
+  .featured-slider-wrap .item-content .whiteFont {
+    font-size: 22px;
+  }
   #header-inner .socials {
     display: none;
   }
@@ -3558,6 +3562,9 @@ article .post-media {
   }
 }
 @media screen and (max-width: 600px) {
+  .featured-slider-wrap .item-content {
+    left: 50%;
+  }
   #post-author .avatar-author {
     float: none;
   }
