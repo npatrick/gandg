@@ -171,15 +171,19 @@
 			$mobileCover = $('.mobile-cover');
 
 		if ($menu.length) {
+			var ww = $(window).width();
 			$('.menu-item-has-children > a', $menu).on('click', function (e) {
-				var ww = $(window).width(),
-					$parent = $(this).closest('.menu-item-has-children');
+				var $parent = $(this).closest('.menu-item-has-children');
 
 				if ( ww <= 991) {
 					e.preventDefault();
 					$('> .sub-menu', $parent).slideToggle();
 				}
 			});
+			if (ww <= 991) {
+				$('.skew').hide();
+				console.log('i ran');
+			}
 		}
 		$menuMobile.on('click', function () {
 			$mainMenu.addClass('active');

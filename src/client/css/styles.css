@@ -1036,6 +1036,9 @@ a.anchor {
 #parent-ul .list-three a {
   line-height: 25px;
 }
+.list-three a span {
+  font-size: 24px;
+}
 .list-span {
   display: block;
 }
@@ -3366,6 +3369,16 @@ article .post-media {
   #parent-ul {
     max-height: unset;
     overflow: unset;
+  }
+  .list-one, .list-two, .list-three {
+    background-size: 30px !important;
+    background-position: top 10px left 10px !important;
+    padding-top: 0 !important;
+    padding-left: 40px !important;
+    margin-left: 0 !important;
+  }
+  .list-three a span {
+    font-size: 18px;
   }
   #header-inner .socials {
     display: none;
