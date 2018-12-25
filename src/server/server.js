@@ -27,6 +27,18 @@ app.use(morgan('tiny', {
 // NOTE: disabling line below to serve this API not providing static files
 // app.use('/', express.static(path.join(__dirname, '../client')));
 
+// Transporter email object
+let transporter = nodemailer.createTransport({
+	pool: true,
+	host: 'host221.hostmonster.com',
+	port: 465,
+	secureConnection: true,
+	auth: {
+		user: process.env.EMAIL,
+		pass: process.env.PASS
+	}
+});
+
 const whitelist = [
 	'http://gandgconstruction.site', 
 	'http://www.gandgconstruction.site', 
@@ -78,9 +90,9 @@ app.post('/sendemail', cors(corsOptions), (req, res, next) => {
 	  }
 	} catch (err) {
 		if (err.message) {
-			logger.error('Caught error in /sendmail email content validation && makeup with message ===>', err.message);
+			logger.error('Caught error in /sendemail email content validation && makeup with message ===>', err.message);
 		} else {
-			logger.error('Caught error in /sendmail email content validation && makeup:', err);
+			logger.error('Caught error in /sendemail email content validation && makeup:', err);
 		}
 		return res.status(422).send('Something went wrong :(');
 	}
