@@ -25,7 +25,7 @@ app.use(morgan('tiny', {
 }));
 
 // NOTE: disabling line below to serve this API not providing static files
-app.use('/', express.static(path.join(__dirname, '../client')));
+// app.use('/', express.static(path.join(__dirname, '../client')));
 
 const whitelist = [
 	'http://gandgconstruction.site', 
