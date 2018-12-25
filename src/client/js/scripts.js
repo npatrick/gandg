@@ -374,11 +374,7 @@ $.get(apiHome)
 					return
 				}
 			}
-			console.log('will be submitting with:\n', 
-				message, '\n',
-				name, '\n',
-				email, '\n',
-				phone);
+
 			$.post({
 				url: apiHome + '/sendemail',
 				data: {
