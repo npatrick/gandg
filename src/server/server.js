@@ -91,12 +91,12 @@ app.post('/sendemail', cors(corsOptions), (req, res, next) => {
 
  	let dataBody = {
  		from: tempEmailAddress,
- 		to: 'admin@gandgconstruction.site',
+ 		to: 'info@gandgconstruction.site',
  		subject: emailSubject,
  		text: emailBody
  	};
  	let SMSBody = {
- 		from: 'admin@gandgconstruction.site',
+ 		from: 'info@gandgconstruction.site',
  		to: 'forwarding@gandgconstruction.site',
  		subject: emailSubject,
  		text: `[G&G Site] New email from ${tempName} @ ${tempPhone}`
