@@ -4,6 +4,7 @@ const express = require('express');
 const morgan = require('morgan');
 const favicon = require('serve-favicon');
 const path = require('path');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 const validator = require('validator');
@@ -23,6 +24,9 @@ app.use(morgan('tiny', {
 		return res.statusCode >= 400
 	}, stream: process.stdout
 }));
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // NOTE: disabling line below to serve this API not providing static files
 // app.use('/', express.static(path.join(__dirname, '../client')));
@@ -75,7 +79,7 @@ app.post('/sendemail', cors(corsOptions), (req, res, next) => {
 	  tempName = cleanName.length < 50 ? cleanName : null;
 	  tempEmailAddress = cleanEmail;
 	  tempPhone = validator.isAscii(cleanPhone) && cleanPhone.length < 25 ? cleanPhone : null;
-
+	
 	  if (!helperFn.validateEmail(tempEmailAddress)) {
 	  	logger.debug('Unaccepted email:', tempEmailAddress);
 	  	return res.status(200).send('Invalid email');
